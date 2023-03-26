@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Google Search Page</title>
+  <link rel="stylesheet" href="css/google-search.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="icon" type="image/x-icon" href="images/favicon_google_logo_new_icon.ico">
+</head>
+
+<body>
+  <header class="flex">
+    <nav class="flex">
+      <li>
+        <a href="#">Gmail</a>
+      </li>
+      <li>
+        <a href="#">Images</a>
+      </li>
+    </nav>
+
+    <div class="flex">
+      <a href="#" class="circle grid" id="apps" title="Google Apps">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <a href="#" class="circle -hover" id="profile" title="Google Account">
+        <img src="images/zia-bro.jpg" alt="">
+      </a>
+    </div>
+  </header>
+
+  <main class="flex">
+    <section id="logo__container" class="flex">
+      <picture>
+        <source media="(prefers-color-scheme: dark)"
+          srcset="https://raw.githubusercontent.com/rathore-himanshu/Google-Home-Page/main/images/googlelogo_light_color.png">
+        <img src="https://raw.githubusercontent.com/rathore-himanshu/Google-Home-Page/main/images/googlelogo_color.png"
+          alt="Google Logo">
+      </picture>
+    </section>
+    <section id="form__container" class="flex">
+      <form class="flex">
+        <div class="bar flex">
+          <span onclick="goto()" class="material-symbols-outlined">search</span>
+          <input id="user-query" class="search__bar" type="text">
+          <span class="google-mic-icon" title="Voice search">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Google_mic.svg" alt="">
+          </span>
+          <span class="google-lens-icon" title="image search">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/2/2b/Google_Lens_2021.svg" alt="">
+          </span>
+        </div>
+        <fieldset>
+          <button onclick="goto()" type="button">Google Search</button>
+          <button onclick="goto()" type="button">I'm Feeling Lucky</button>
+        </fieldset>
+      </form>
+    </section>
+    <section id="lang__container" class="flex">
+      <p>Google offered in:</p>
+      <ul id="languages" class="flex">
+        <li><a href="#">Urdu </a></li>
+        <li><a href="#">Pashot </a></li>
+        <li><a href="#">Bengali</a></li>
+        <li><a href="#">Chineese</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <section id="location">
+      <p>Pakistan</p>
+    </section>
+    <section id="additional__links">
+      <ul class="flex">
+        <div class="flex">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">How Search works</a></li>
+        </div>
+        <div class="flex">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Settings</a></li>
+        </div>
+      </ul>
+    </section>
+  </footer>
+  <script type="text/javascript">
+    document.getElementById("user-query").addEventListener("click", function () {
+      document.getElementById("searchbartext").value = "";
+    });
+    function goto() {
+      console.log("query=" + document.getElementById("user-query").value);
+      location.href = "google-search-page-result.html?query=" + document.getElementById("user-query").value;
+    }
+
+    document.getElementById("user-query").addEventListener("keydown", function (event) {
+      console.log("event is ", event);
+      var value = document.getElementById("user-query").value;
+      if (event.key === "Enter") {
+        console.log("keydown Enter key pressed");
+        event.preventDefault();
+        if (value)
+          location.href = "google-search-page-result.html?query=" + value;
+      }
+    });
+  </script>
+</body>
+
+</html>

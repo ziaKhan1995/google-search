@@ -1,6 +1,14 @@
 # google-search
 To redesign the google.com search interface and Googe search result page using HTML/CSS/Javascript.  This is just a tutorial for learning purposes, this is not meant to use the design in any other use.
 
+Demo Links:
+Google Search/Home Page:
+https://codepen.io/ziakhan1995/pen/oNPmpNa
+
+Google Seach Results Page:
+https://codepen.io/ziakhan1995/pen/qBMgpNJ?editors=1010
+
+
 Here is the image of Home Google.com search page with user query typed
 ![image](https://user-images.githubusercontent.com/77499979/227772593-d1136282-eb14-4214-a9d9-b248f03a3549.png)
 

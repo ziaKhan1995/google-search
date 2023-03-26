@@ -2,6 +2,7 @@
 To redesign the google.com search interface and Googe search result page using HTML/CSS/Javascript.  This is just a tutorial for learning purposes, this is not meant to use the design in any other use.
 
 Demo Links:
+
 Google Search/Home Page:
 https://codepen.io/ziakhan1995/pen/oNPmpNa
 
